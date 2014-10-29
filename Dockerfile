@@ -18,11 +18,9 @@ WORKDIR /app
 
 RUN npm install -g bower grunt-cli yo generator-meanjs express
 
-# RUN curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
-
 EXPOSE 80:80
 EXPOSE 443:443
 EXPOSE 3000:3000
 
-ENTRYPOINT echo "\n##############################\n1. 'yo meanjs' to scaffold your app in the current directory.\n3. Start mongo in the background (e.g. 'mongod &')\n##############################\n"
+CMD echo "\n##############################\n1. 'yo meanjs' to scaffold your app in the current directory.\n2. Start mongo in the background (e.g. 'mongod &')\n##############################\n"
 
